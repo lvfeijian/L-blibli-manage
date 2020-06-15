@@ -9,7 +9,6 @@ export default {
             url:'users',
             data:context.state.queryInfo
         }).then(res => {
-            console.log(res);
             res = res.data
             context.commit(types.GET_USER_LIST,res)
         })

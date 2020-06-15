@@ -13,6 +13,11 @@ const types = [
 
     //orchard模块
     'GET_ROLE_LIST',//获取角色列表
+    'DEL_ROLES_POWER',//删除角色权限列表
+    'GET_ASSIGN_ROLES',//获取分配角色数据
+    'EDIT_ASSIGN_ROLES',//修改分配角色
+    //massif模块
+    'GET_POWER_LIST',//获取权限列表
 ]
 const typesObj = {}
 types.forEach(type => typesObj[type] = type)

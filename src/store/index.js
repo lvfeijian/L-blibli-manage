@@ -7,6 +7,7 @@ Vue.use(Vuex)
 
 
 export default new Vuex.Store({
+  namespaced:true,
   state: {
     username: sessionStorage.getItem('username'),
     token: sessionStorage.getItem('token') ? sessionStorage.getItem('token') : '',

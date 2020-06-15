@@ -35,6 +35,9 @@ export default function (options) {
     if (/get/i.test(options.method) && !options.headers) {
         options.url += ('?' + Qs.stringify(options.data))
     }
+    if(/delete/i.test(options.method) && !options.headers) {
+        options.data = Qs.stringify(options.data)
+    }
     return new Promise((resolve, reject) => {
         axios.request(options).then(res => {
             const resData = res.data
